@@ -21,7 +21,7 @@ export default function AuthCallbackPage() {
   }, [params, dispatch, router]);
 
   return (
-    <Box minHeight="100vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center" gap={2}>
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
       <CircularProgress color="primary" />
       <Typography color="text.secondary">Signing you in...</Typography>
     </Box>
