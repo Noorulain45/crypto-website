@@ -36,7 +36,7 @@ export default function ProfilePage() {
             <Avatar src={profile?.avatar} sx={{ width: 80, height: 80, fontSize: 32 }}>
               {profile?.name?.[0]}
             </Avatar>
-            <Typography variant="h5" fontWeight={700}>{profile?.name}</Typography>
+            <Typography variant="h5" sx={{ fontWeight: 700 }}>{profile?.name}</Typography>
             <Typography color="text.secondary">{profile?.email}</Typography>
 
             <Box component="form" sx={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 2 }}

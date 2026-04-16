@@ -21,7 +21,7 @@ export default function MarketTrendsSection() {
 
   return (
     <Box sx={{ py: 8, px: { xs: 3, md: 6 }, bgcolor: '#060a0d' }} id="markets">
-      <Typography variant="h4" fontWeight={800} mb={4} sx={{ color: '#fff' }}>
+      <Typography variant="h4" sx={{ fontWeight: 800, mb: 4, color: '#fff' }}>
         Market Trend
       </Typography>
 
