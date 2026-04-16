@@ -31,7 +31,7 @@ export default function SignupPage() {
   };
 
   return (
-    <Box minHeight="100vh" display="flex" alignItems="center" justifyContent="center" bgcolor="background.default">
+    <Box sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'background.default' }}>
       <Card sx={{ width: '100%', maxWidth: 420, p: 2 }}>
         <CardContent>
           <Typography variant="h5" sx={{ fontWeight: 700, textAlign: 'center', mb: 1 }}>Create Account</Typography>
@@ -43,7 +43,7 @@ export default function SignupPage() {
 
           <Divider sx={{ mb: 3 }}>or</Divider>
 
-          <Box component="form" onSubmit={handleSubmit} display="flex" flexDirection="column" gap={2}>
+          <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             <TextField label="Full Name" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
             <TextField label="Email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
             <TextField label="Password" type="password" required inputProps={{ minLength: 6 }} value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} />
