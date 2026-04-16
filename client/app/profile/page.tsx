@@ -25,12 +25,12 @@ export default function ProfilePage() {
     if (profile) setName(profile.name);
   }, [profile]);
 
-  if (isLoading) return <Box display="flex" justifyContent="center" mt={10}><CircularProgress /></Box>;
+  if (isLoading) return <Box sx={{ display: 'flex', justifyContent: 'center', mt: 10 }}><CircularProgress /></Box>;
 
   return (
     <>
       <Navbar />
-      <Box maxWidth={500} mx="auto" mt={8} px={2}>
+      <Box sx={{ maxWidth: 500, mx: 'auto', mt: 8, px: 2 }}>
         <Card>
           <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
             <Avatar src={profile?.avatar} sx={{ width: 80, height: 80, fontSize: 32 }}>
@@ -39,7 +39,7 @@ export default function ProfilePage() {
             <Typography variant="h5" fontWeight={700}>{profile?.name}</Typography>
             <Typography color="text.secondary">{profile?.email}</Typography>
 
-            <Box component="form" width="100%" display="flex" flexDirection="column" gap={2}
+            <Box component="form" sx={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 2 }}
               onSubmit={(e) => { e.preventDefault(); updateProfile({ name }); }}>
               <TextField label="Full Name" value={name} onChange={(e) => setName(e.target.value)} />
               {isSuccess && <Alert severity="success">Profile updated!</Alert>}

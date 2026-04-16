@@ -50,7 +50,7 @@ export default function Navbar() {
         </Box>
 
         {/* Nav Links */}
-        <Box display="flex" gap={3} sx={{ display: { xs: 'none', md: 'flex' } }}>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
           {[
             { label: 'Home', href: '/' },
             { label: 'How it works', href: '/#features' },
@@ -117,7 +117,7 @@ export default function Navbar() {
         {/* Right side */}
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           {/* Social icons */}
-          <Box display="flex" sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {socialIcons.map((s, i) => (
               <IconButton key={i} href={s.href} target="_blank" rel="noopener noreferrer" size="small"
                 sx={{ color: '#aaa', border: '1px solid #333', borderRadius: '8px', mx: 0.3, p: '6px', '&:hover': { color: '#00ff9d', borderColor: '#00ff9d' } }}>
